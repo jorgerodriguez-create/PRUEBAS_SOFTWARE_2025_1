@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Clics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="incrementar">Incrementar</button>
+    <p>Contador: <span id="contador">0</span></p>
+    
+    <script>
+        let contador = 0;
+        document.getElementById("incrementar").addEventListener("click", function() {
+            contador++;
+            document.getElementById("contador").textContent = contador;
+        });
+    </script>
+</body>
+</html>

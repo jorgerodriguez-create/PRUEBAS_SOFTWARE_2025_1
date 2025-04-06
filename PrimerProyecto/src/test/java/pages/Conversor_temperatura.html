@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Conversor de Temperaturas</h2>
+    <input type="number" id="temperatura" placeholder="Ingresa la temperatura">
+    <br>
+    <button id="aCelsius">Convertir a Celsius</button>
+    <button id="aFahrenheit">Convertir a Fahrenheit</button>
+    <p id="resultado"></p>
+
+    <script>
+        document.getElementById("aCelsius").addEventListener("click", function() {
+            let temp = parseFloat(document.getElementById("temperatura").value);
+            if (isNaN(temp)) {
+                document.getElementById("resultado").textContent = "Por favor, ingresa un número válido.";
+                return;
+            }
+            let celsius = (temp - 32) * 5/9;
+            document.getElementById("resultado").textContent = `Resultado: ${celsius.toFixed(2)} °C`;
+        });
+
+        document.getElementById("aFahrenheit").addEventListener("click", function() {
+            let temp = parseFloat(document.getElementById("temperatura").value);
+            if (isNaN(temp)) {
+                document.getElementById("resultado").textContent = "Por favor, ingresa un número válido.";
+                return;
+            }
+            let fahrenheit = (temp * 9/5) + 32;
+            document.getElementById("resultado").textContent = `Resultado: ${fahrenheit.toFixed(2)} °F`;
+        });
+    </script>
+</body>
+</html>

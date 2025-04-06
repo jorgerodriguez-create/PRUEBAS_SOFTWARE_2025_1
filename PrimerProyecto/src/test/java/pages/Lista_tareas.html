@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #f4f4f4;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button {
+            cursor: pointer;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lista de Tareas</h2>
+    <input type="text" id="tarea" placeholder="Escribe una tarea">
+    <button id="agregar">Agregar Tarea</button>
+    <ul id="lista"></ul>
+
+    <script>
+        document.getElementById("agregar").addEventListener("click", function() {
+            let tareaTexto = document.getElementById("tarea").value;
+            if (tareaTexto === "") return;
+
+            let li = document.createElement("li");
+            li.textContent = tareaTexto;
+
+            let botonEliminar = document.createElement("button");
+            botonEliminar.textContent = "Eliminar";
+            botonEliminar.addEventListener("click", function() {
+                li.remove();
+            });
+
+            li.appendChild(botonEliminar);
+            document.getElementById("lista").appendChild(li);
+            document.getElementById("tarea").value = "";
+        });
+    </script>
+</body>
+</html>
