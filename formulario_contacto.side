@@ -1,0 +1,113 @@
+{
+  "id": "cdeca4ea-682a-4349-b5f8-8895916b4952",
+  "version": "2.0",
+  "name": "formulario_contacto",
+  "url": "https://www.w3schools.com",
+  "tests": [{
+    "id": "d4fe79b9-c27d-459b-814b-3af6e4c9670a",
+    "name": "punto_1",
+    "commands": [{
+      "id": "9d8f44d1-e3e4-4583-9d11-50afebbcbf25",
+      "comment": "",
+      "command": "open",
+      "target": "/html/html_forms.asp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72bac1c4-64f6-46df-a288-74849cd63db3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "788x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc2b6de5-c01d-459a-ab1d-9706ad1ee093",
+      "comment": "",
+      "command": "click",
+      "target": "id=fname",
+      "targets": [
+        ["id=fname", "id"],
+        ["name=fname", "name"],
+        ["css=#fname", "css:finder"],
+        ["xpath=//input[@id='fname']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[3]/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d2de0d2-ea8f-4546-8f48-9ce87cc3b619",
+      "comment": "",
+      "command": "type",
+      "target": "id=fname",
+      "targets": [
+        ["id=fname", "id"],
+        ["name=fname", "name"],
+        ["css=#fname", "css:finder"],
+        ["xpath=//input[@id='fname']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[3]/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "Jorge"
+    }, {
+      "id": "3c322c71-7c53-4d05-926c-4a15fa9c67ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=lname",
+      "targets": [
+        ["id=lname", "id"],
+        ["name=lname", "name"],
+        ["css=#lname", "css:finder"],
+        ["xpath=//input[@id='lname']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[3]/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e831021-2795-45fa-aae8-85f3e5fd7ccb",
+      "comment": "",
+      "command": "type",
+      "target": "id=lname",
+      "targets": [
+        ["id=lname", "id"],
+        ["name=lname", "name"],
+        ["css=#lname", "css:finder"],
+        ["xpath=//input[@id='lname']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[3]/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Rodriguez"
+    }, {
+      "id": "218be609-5757-43b9-afef-4dfbf45163af",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(10)",
+      "targets": [
+        ["css=input:nth-child(10)", "css:finder"],
+        ["xpath=//input[@value='Submit']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[3]/div/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win1607",
+      "windowTimeout": 2000
+    }, {
+      "id": "06814134-2edf-4c15-aea8-0cd7d659fe5c",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win1607}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6af7272a-8425-4366-924d-0f8aa08897a4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d4fe79b9-c27d-459b-814b-3af6e4c9670a"]
+  }],
+  "urls": ["https://www.w3schools.com/"],
+  "plugins": []
+}

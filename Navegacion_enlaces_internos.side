@@ -1,0 +1,78 @@
+{
+  "id": "6f8dc590-5f1a-4abe-a714-1cb4333aab68",
+  "version": "2.0",
+  "name": "Navegacion_enlaces_internos",
+  "url": "https://www.selenium.dev",
+  "tests": [{
+    "id": "b2ea7e57-a835-49b8-8eb2-68610922058a",
+    "name": "punto_3",
+    "commands": [{
+      "id": "816d24dd-a194-4325-b8ca-e79389abd92b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17cbed8c-7cc7-419a-aacc-573852ec48ec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53d407db-9b78-4838-871a-41febd67e312",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) span",
+      "targets": [
+        ["css=.nav-item:nth-child(2) span", "css:finder"],
+        ["xpath=//div[@id='main_navbar']/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Downloads')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecc5f56e-f740-46b3-bbec-8c8719185766",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(4) span",
+      "targets": [
+        ["css=.nav-item:nth-child(4) span", "css:finder"],
+        ["xpath=//div[@id='main_navbar']/ul/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Projects')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4325850-1a10-4210-b9eb-dbd23699c5b6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2850.39990234375)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "733a66ac-74af-4474-acdf-d1b34bacc3b8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) span",
+      "targets": [
+        ["css=.nav-item:nth-child(2) span", "css:finder"],
+        ["xpath=//div[@id='main_navbar']/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Downloads')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "724ce36d-d2b0-4825-b60d-8f08ed812c1b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b2ea7e57-a835-49b8-8eb2-68610922058a"]
+  }],
+  "urls": ["https://www.selenium.dev/"],
+  "plugins": []
+}

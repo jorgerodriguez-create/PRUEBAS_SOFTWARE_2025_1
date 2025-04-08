@@ -1,0 +1,90 @@
+{
+  "id": "ae41e6b2-a7ad-4b42-9acf-60a7a7fda34f",
+  "version": "2.0",
+  "name": "Producto_tienda_online",
+  "url": "https://automationexercise.com",
+  "tests": [{
+    "id": "a72141fb-a085-483c-866a-1d7f85366c0f",
+    "name": "punto_2",
+    "commands": [{
+      "id": "c28a5611-2011-4fa9-ab8a-d9a320726c5c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53b9f659-119a-4775-beb7-1d095d8a3dc7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "859de412-e49a-4943-b7e4-e031eae76510",
+      "comment": "",
+      "command": "click",
+      "target": "linkText= Products",
+      "targets": [
+        ["linkText= Products", "linkText"],
+        ["css=.navbar-nav > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//header[@id='header']/div/div/div/div[2]/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/products')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Products')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7282d16f-17f1-4161-b311-634a70de3045",
+      "comment": "",
+      "command": "click",
+      "target": "id=search_product",
+      "targets": [
+        ["id=search_product", "id"],
+        ["name=search", "name"],
+        ["css=#search_product", "css:finder"],
+        ["xpath=//input[@id='search_product']", "xpath:attributes"],
+        ["xpath=//section[@id='advertisement']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d56f909-6985-4846-a894-9af51b52ceaa",
+      "comment": "",
+      "command": "type",
+      "target": "id=search_product",
+      "targets": [
+        ["id=search_product", "id"],
+        ["name=search", "name"],
+        ["css=#search_product", "css:finder"],
+        ["xpath=//input[@id='search_product']", "xpath:attributes"],
+        ["xpath=//section[@id='advertisement']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Blue Top"
+    }, {
+      "id": "3f28c616-daed-4a25-8e4a-6a3f80250b8e",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit_search",
+      "targets": [
+        ["id=submit_search", "id"],
+        ["css=#submit_search", "css:finder"],
+        ["xpath=//button[@id='submit_search']", "xpath:attributes"],
+        ["xpath=//section[@id='advertisement']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6f379246-617f-4271-89fd-fa10d5af9d5d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a72141fb-a085-483c-866a-1d7f85366c0f"]
+  }],
+  "urls": ["https://automationexercise.com/"],
+  "plugins": []
+}
