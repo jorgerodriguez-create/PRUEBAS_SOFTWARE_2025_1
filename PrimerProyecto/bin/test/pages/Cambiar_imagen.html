@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Imagen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Imagen Cambiable</h2>
+    <img id="imagen" src="https://ecdisis.com/wp-content/uploads/2021/01/01-Software-1024x630.jpeg" alt="Imagen inicial">
+    <br>
+    <button id="cambiar">Cambiar Imagen</button>
+
+    <script>
+        let imagenActual = true;
+        document.getElementById("cambiar").addEventListener("click", function() {
+            let img = document.getElementById("imagen");
+            if (imagenActual) {
+                img.src = "https://www.inesdi.com/sites/default/files/2022-05/tipos%20de%20software.jpg";
+            } else {
+                img.src = "https://ecdisis.com/wp-content/uploads/2021/01/01-Software-1024x630.jpeg";
+            }
+            imagenActual = !imagenActual;
+        });
+    </script>
+</body>
+</html>

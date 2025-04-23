@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el Número</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #mensaje {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Adivina el Número</h2>
+    <p>Intenta adivinar un número entre 1 y 100</p>
+    <input type="number" id="numero" placeholder="Ingresa tu número">
+    <br>
+    <button id="adivinar">Adivinar</button>
+    <p id="mensaje"></p>
+
+    <script>
+        let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+
+        document.getElementById("adivinar").addEventListener("click", function() {
+            let intento = parseInt(document.getElementById("numero").value);
+            if (isNaN(intento) || intento < 1 || intento > 100) {
+                document.getElementById("mensaje").textContent = "Por favor, ingresa un número válido entre 1 y 100.";
+                return;
+            }
+            if (intento === numeroSecreto) {
+                document.getElementById("mensaje").textContent = "¡Felicidades! Adivinaste el número.";
+            } else if (intento < numeroSecreto) {
+                document.getElementById("mensaje").textContent = "El número es demasiado bajo. Inténtalo de nuevo.";
+            } else {
+                document.getElementById("mensaje").textContent = "El número es demasiado alto. Inténtalo de nuevo.";
+            }
+        });
+    </script>
+</body>
+</html>
